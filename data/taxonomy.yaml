@@ -1,0 +1,111 @@
+# Crop and problem taxonomy. AGRONOMIST-OWNED: review and edit before the pilot.
+# Each crop has its OWN problem list. The bot can only ever name a problem listed under the
+# detected crop, so tomato labels can never appear for chilli.
+# symptoms use the keys in glossary.yaml; leaf_age: older | newer | any
+
+crops:
+  chilli:
+    en: Chilli
+    ta: மிளகாய்
+    tl: Milagai
+    scientific: [Capsicum annuum, Capsicum frutescens]
+    problems:
+      leaf_curl_virus: {type: viral, en: Leaf curl virus, ta: இலை சுருட்டல் நச்சுயிரி நோய், tl: Ilai surul vairas noi, symptoms: [leaf_curl, stunting, mosaic], note_en: "Spread by whitefly; infected plants cannot be cured, only vectors managed.", note_ta: "வெள்ளை ஈ மூலம் பரவும்; பாதித்த செடியை குணப்படுத்த முடியாது, பரப்பும் பூச்சியை மட்டுமே கட்டுப்படுத்தலாம்."}
+      thrips_mites: {type: pest, en: Thrips / mite damage, ta: இலைப்பேன் / சிலந்திப்பேன் தாக்குதல், tl: Ilai paen / silandhi paen, symptoms: [leaf_curl, insects_visible, drying]}
+      anthracnose: {type: fungal, en: Anthracnose (fruit rot and die-back), ta: காய் அழுகல் / நுனி கருகல் நோய், tl: Kaai azhugal noi, symptoms: [fruit_rot, leaf_spots, drying]}
+      cercospora_leaf_spot: {type: fungal, en: Cercospora leaf spot, ta: இலைப்புள்ளி நோய் (செர்கோஸ்போரா), tl: Ilai pulli noi, symptoms: [leaf_spots, yellowing]}
+      bacterial_leaf_spot: {type: bacterial, en: Bacterial leaf spot, ta: பாக்டீரியா இலைப்புள்ளி நோய், tl: Bacteria ilai pulli, symptoms: [leaf_spots]}
+      powdery_mildew: {type: fungal, en: Powdery mildew, ta: சாம்பல் நோய், tl: Saambal noi, symptoms: [white_powder, yellowing]}
+      wilt_damping_off: {type: fungal, en: Wilt / damping-off, ta: வாடல் நோய் / நாற்றழுகல், tl: Vaadal noi, symptoms: [wilting, base_rot]}
+      nitrogen_deficiency: {type: nutrient, en: Nitrogen deficiency, ta: தழைச்சத்து குறைபாடு, tl: Thazhai sathu kuraivu, symptoms: [yellowing, stunting], leaf_age: older}
+      magnesium_deficiency: {type: nutrient, en: Magnesium deficiency, ta: மெக்னீசியம் சத்து குறைபாடு, tl: Magnesium sathu kuraivu, symptoms: [yellowing], leaf_age: older}
+      iron_zinc_deficiency: {type: nutrient, en: Iron / zinc deficiency, ta: இரும்பு / துத்தநாக சத்து குறைபாடு, tl: Irumbu / thuthanaaga sathu kuraivu, symptoms: [yellowing, stunting], leaf_age: newer}
+  tomato:
+    en: Tomato
+    ta: தக்காளி
+    tl: Thakkali
+    scientific: [Solanum lycopersicum]
+    problems:
+      early_blight: {type: fungal, en: Early blight, ta: முன் இலைக் கருகல் நோய், tl: Mun ilai karugal, symptoms: [leaf_spots, yellowing], leaf_age: older}
+      late_blight: {type: fungal, en: Late blight, ta: பின் இலைக் கருகல் நோய், tl: Pin ilai karugal, symptoms: [leaf_spots, drying, fruit_rot]}
+      leaf_curl_virus: {type: viral, en: Tomato leaf curl virus, ta: இலை சுருட்டல் நச்சுயிரி நோய், tl: Ilai surul vairas noi, symptoms: [leaf_curl, stunting]}
+      bacterial_wilt: {type: bacterial, en: Bacterial wilt, ta: பாக்டீரியா வாடல் நோய், tl: Bacteria vaadal, symptoms: [wilting]}
+      fruit_borer: {type: pest, en: Fruit borer, ta: காய்ப்புழு, tl: Kaai puzhu, symptoms: [holes_chewed, insects_visible, fruit_rot]}
+      nitrogen_deficiency: {type: nutrient, en: Nitrogen deficiency, ta: தழைச்சத்து குறைபாடு, tl: Thazhai sathu kuraivu, symptoms: [yellowing, stunting], leaf_age: older}
+  paddy:
+    en: Paddy
+    ta: நெல்
+    tl: Nel
+    scientific: [Oryza sativa]
+    problems:
+      blast: {type: fungal, en: Blast, ta: குலை நோய், tl: Kulai noi, symptoms: [leaf_spots, drying]}
+      brown_spot: {type: fungal, en: Brown spot, ta: பழுப்பு புள்ளி நோய், tl: Pazhuppu pulli noi, symptoms: [leaf_spots]}
+      bacterial_leaf_blight: {type: bacterial, en: Bacterial leaf blight, ta: பாக்டீரியா இலைக் கருகல் நோய், tl: Ilai karugal noi, symptoms: [drying, yellowing, leaf_streaks]}
+      sheath_blight: {type: fungal, en: Sheath blight, ta: இலையுறை கருகல் நோய், tl: Ilaiyurai karugal, symptoms: [leaf_spots, base_rot]}
+      tungro: {type: viral, en: Tungro, ta: துங்ரோ நோய், tl: Tungro noi, symptoms: [yellowing, stunting]}
+      stem_borer: {type: pest, en: Stem borer, ta: தண்டுத் துளைப்பான், tl: Thandu thulaippaan, symptoms: [drying, insects_visible]}
+      leaf_folder: {type: pest, en: Leaf folder, ta: இலைச்சுருட்டுப் புழு, tl: Ilai surutu puzhu, symptoms: [leaf_curl, leaf_streaks, insects_visible]}
+      bacterial_leaf_streak: {type: bacterial, en: Bacterial leaf streak, ta: பாக்டீரியா இலைக்கோடு நோய், tl: Ilai kodu noi, symptoms: [leaf_streaks, yellowing]}
+      bacterial_panicle_blight: {type: bacterial, en: Bacterial panicle blight, ta: கதிர் கருகல் நோய், tl: Kadhir karugal noi, symptoms: [drying, fruit_rot]}
+      downy_mildew: {type: fungal, en: Downy mildew, ta: அடிச்சாம்பல் நோய், tl: Adi saambal noi, symptoms: [yellowing, white_powder, stunting]}
+      hispa: {type: pest, en: Rice hispa, ta: ஹிஸ்பா வண்டு, tl: Hispa vandu, symptoms: [leaf_streaks, insects_visible, drying]}
+      nitrogen_deficiency: {type: nutrient, en: Nitrogen deficiency, ta: தழைச்சத்து குறைபாடு, tl: Thazhai sathu kuraivu, symptoms: [yellowing, stunting], leaf_age: older}
+      zinc_deficiency: {type: nutrient, en: Zinc deficiency, ta: துத்தநாக சத்து குறைபாடு, tl: Thuthanaaga sathu kuraivu, symptoms: [leaf_spots, stunting, yellowing], leaf_age: newer}
+  banana:
+    en: Banana
+    ta: வாழை
+    tl: Vaazhai
+    scientific: [Musa acuminata, Musa paradisiaca]
+    problems:
+      sigatoka_leaf_spot: {type: fungal, en: Sigatoka leaf spot, ta: இலைப்புள்ளி நோய் (சிகடோகா), tl: Sigatoka ilai pulli, symptoms: [leaf_spots, leaf_streaks, drying]}
+      panama_wilt: {type: fungal, en: Panama (Fusarium) wilt, ta: பனாமா வாடல் நோய், tl: Panama vaadal, symptoms: [wilting, yellowing], leaf_age: older}
+      bunchy_top: {type: viral, en: Bunchy top virus, ta: முடிக்கொத்து நோய், tl: Mudikothu noi, symptoms: [stunting, leaf_streaks]}
+      pseudostem_weevil: {type: pest, en: Pseudostem weevil, ta: தண்டுக் கூன் வண்டு, tl: Thandu koon vandu, symptoms: [holes_chewed, wilting]}
+      potassium_deficiency: {type: nutrient, en: Potassium deficiency, ta: சாம்பல்சத்து குறைபாடு, tl: Saambal sathu kuraivu, symptoms: [yellowing, drying], leaf_age: older}
+  coconut:
+    en: Coconut
+    ta: தென்னை
+    tl: Thennai
+    scientific: [Cocos nucifera]
+    problems:
+      bud_rot: {type: fungal, en: Bud rot, ta: குருத்து அழுகல் நோய், tl: Kuruthu azhugal, symptoms: [base_rot, wilting, drying]}
+      leaf_blight: {type: fungal, en: Leaf blight, ta: இலைக் கருகல் நோய், tl: Ilai karugal, symptoms: [drying, leaf_spots]}
+      root_wilt: {type: other, en: Root (wilt) disease, ta: வேர் வாடல் நோய், tl: Ver vaadal, symptoms: [yellowing, wilting], leaf_age: older}
+      eriophyid_mite: {type: pest, en: Eriophyid mite (nut damage), ta: ஈரியோபைட் சிலந்திப்பேன், tl: Eriophyid silandhi, symptoms: [fruit_rot, insects_visible]}
+      rhinoceros_beetle: {type: pest, en: Rhinoceros beetle, ta: காண்டாமிருக வண்டு, tl: Kaandaamiruga vandu, symptoms: [holes_chewed]}
+      red_palm_weevil: {type: pest, en: Red palm weevil, ta: சிவப்பு கூன் வண்டு, tl: Sivappu koon vandu, symptoms: [wilting, holes_chewed, base_rot]}
+  cardamom:
+    en: Cardamom
+    ta: ஏலக்காய்
+    tl: Elakkai
+    scientific: [Elettaria cardamomum]
+    problems:
+      katte_mosaic: {type: viral, en: Katte (mosaic) disease, ta: கட்டே (தேமல்) நோய், tl: Katte noi, symptoms: [mosaic, stunting, leaf_streaks]}
+      capsule_rot: {type: fungal, en: Capsule rot (azhukal), ta: காய் அழுகல் நோய், tl: Kaai azhugal, symptoms: [fruit_rot, base_rot]}
+      leaf_blight: {type: fungal, en: Leaf blight, ta: இலைக் கருகல் நோய், tl: Ilai karugal, symptoms: [leaf_spots, drying]}
+      thrips: {type: pest, en: Cardamom thrips, ta: ஏலக்காய் இலைப்பேன், tl: Elakkai paen, symptoms: [insects_visible, fruit_rot]}
+      rhizome_rot: {type: fungal, en: Rhizome rot, ta: கிழங்கு அழுகல் நோய், tl: Kizhangu azhugal, symptoms: [yellowing, base_rot, wilting]}
+  pepper:
+    en: Black pepper
+    ta: மிளகு
+    tl: Milagu
+    scientific: [Piper nigrum]
+    problems:
+      quick_wilt: {type: fungal, en: Quick wilt (foot rot), ta: திடீர் வாடல் நோய், tl: Thideer vaadal, symptoms: [wilting, base_rot, leaf_spots]}
+      slow_decline: {type: other, en: Slow decline, ta: மெதுவான வாடல் நோய், tl: Medhuvaana vaadal, symptoms: [yellowing, stunting, drying]}
+      pollu_beetle: {type: pest, en: Pollu beetle, ta: பொள்ளு வண்டு, tl: Pollu vandu, symptoms: [holes_chewed, fruit_rot]}
+      anthracnose: {type: fungal, en: Anthracnose, ta: ஆந்த்ராக்னோஸ் நோய், tl: Anthracnose noi, symptoms: [leaf_spots, fruit_rot]}
+  mango:
+    en: Mango
+    ta: மா
+    tl: Maa
+    scientific: [Mangifera indica]
+    problems:
+      anthracnose: {type: fungal, en: Anthracnose, ta: ஆந்த்ராக்னோஸ் / கருகல் நோய், tl: Anthracnose noi, symptoms: [leaf_spots, fruit_rot, drying]}
+      powdery_mildew: {type: fungal, en: Powdery mildew, ta: சாம்பல் நோய், tl: Saambal noi, symptoms: [white_powder]}
+      mango_hopper: {type: pest, en: Mango hopper, ta: தத்துப்பூச்சி, tl: Thathu poochi, symptoms: [insects_visible, drying]}
+      leaf_webber: {type: pest, en: Leaf webber, ta: இலைக்கூடு கட்டும் புழு, tl: Ilai koodu puzhu, symptoms: [webbing, drying, insects_visible]}
+
+# Non-crop prompts for the plant gate (BioCLIP zero-shot negatives)
+non_plant_prompts: [a photo of a person, a photo of a document or brochure, a screenshot of a phone screen, a photo of bare soil, a photo of an animal, a photo of a vehicle, a photo of food on a plate]
+plant_prompts: [a photo of a plant, a photo of crop leaves in a field, a close-up photo of a leaf]

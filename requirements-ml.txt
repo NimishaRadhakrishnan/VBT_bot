@@ -1,0 +1,8 @@
+# Model stack: BioCLIP 2 crop ID, BGE-M3 embeddings, reranker, head training.
+# CPU-only PyTorch is enough to RUN the bot:  pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.3
+torchvision>=0.18
+open_clip_torch>=2.26
+sentence-transformers>=3.0
+timm>=1.0
+onnx>=1.16

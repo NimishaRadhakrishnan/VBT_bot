@@ -1,0 +1,39 @@
+# Surface forms (Tamil script, Tanglish spellings, English) -> canonical keys.
+# Matching is case-insensitive; romanised words also match with small spelling differences.
+# Add new spellings here when the bot logs "glossary miss".
+
+crop:
+  chilli: [chilli, chili, chillies, chilly, green chilli, milagai, milakai, milaghai, mulagai, molagai, மிளகாய், மிளகாய்]
+  tomato: [tomato, tomatoes, thakkali, takkali, தக்காளி]
+  paddy: [paddy, rice, nel, nellu, nelpayir, நெல், நெற்பயிர்]
+  banana: [banana, plantain, vazhai, vaazhai, valai, vaalai, வாழை]
+  coconut: [coconut, thennai, thenai, thennamaram, தென்னை, தென்னைமரம்]
+  cardamom: [cardamom, elakkai, yelakkai, elaichi, ஏலக்காய், ஏலம்]
+  pepper: [black pepper, pepper, pepper vine, milagu, milaku, மிளகு]
+  mango: [mango, maamaram, mamaram, maanga, mangai, மாமரம், மாங்காய், மா மரம்]
+
+symptom:
+  yellowing: [yellow, yellowing, yellowish, pale, manjal, manjala, manjalaa, manjalaga, மஞ்சள், மஞ்சளாக, வெளிர்]
+  leaf_curl: [curl, curling, curled, curls, surul, surundu, surunduthu, suruttal, suruludhu, சுருண்டு, சுருள், சுருட்டல், சுருங்கி]
+  leaf_spots: [spot, spots, spotted, patches, pulli, pulligal, புள்ளி, புள்ளிகள், கரும்புள்ளி]
+  white_powder: [white powder, powdery, white coating, saambal, sambal, வெள்ளை பவுடர், வெண்மையான பூச்சு, சாம்பல்]
+  wilting: [wilt, wilting, wilted, drooping, droop, vaadi, vaadal, vadi, vaaduthu, வாடி, வாடல், வாடுது, வாடுகிறது]
+  fruit_rot: [rot, rotting, rotten, azhugal, alugal, azhugudhu, அழுகல், அழுகுது, அழுகி]
+  base_rot: [stem rot, root rot, base rot, collar rot, ver azhugal, அடிப்பகுதி அழுகல், வேர் அழுகல்]
+  holes_chewed: [holes, hole, eaten, chewed, ottai, ottaigal, ஓட்டை, ஓட்டைகள், துளை]
+  insects_visible: [insect, insects, pest, pests, worm, worms, larvae, caterpillar, poochi, puzhu, poochigal, பூச்சி, புழு, பூச்சிகள், வெள்ளை ஈ, whitefly, thrips, mites, aphids]
+  stunting: [stunted, stunting, not growing, small plant, valarchi illai, valaravillai, வளர்ச்சி இல்லை, வளர்ச்சி குறைவு, வளரவில்லை]
+  mosaic: [mosaic, mottled, patchy green, themal, தேமல்]
+  drying: [drying, dry, dried, burnt, scorched, karugal, karugi, kaanju, kaayudhu, கருகல், கருகி, காய்ந்து, காயுது]
+  leaf_streaks: [streak, streaks, stripes, lines on leaf, kodugal, கோடுகள்]
+  webbing: [web, webbing, silk, silandhi valai, சிலந்தி வலை]
+
+leaf_age:
+  older: [old leaves, older leaves, older, lower leaves, bottom leaves, pazhaya, pazhaiya, palaya, keezh ilai, kizh ilai, keela ulla, பழைய, கீழ் இலை, கீழ் இலைகள், அடி இலை]
+  newer: [new leaves, newer leaves, newer, young leaves, top leaves, upper leaves, pudhu, puthu, pudhiya, mel ilai, mela ulla, புது, புதிய, மேல் இலை, இளம் இலை, நுனி இலை]
+
+intent:
+  product: [product, products, which product, medicine, marunthu, marundhu, marundu, மருந்து, uram, உரம், fertilizer, fertiliser, vishakan, விசாகன், spray, enna podanum, enna adikkanum, enna podalam, தெளிக்க, பயன்படுத்த, dosage, dose, alavu, அளவு]
+  agronomist: [agronomist, expert, officer, nipunar, நிபுணர், அதிகாரி, human, call me, pesanum, பேசணும்]
+  greeting: [hi, hello, hey, vanakkam, வணக்கம், namaskaram]
+  photo_refusal: [no photo, cannot send photo, photo illa, photo illai, போட்டோ இல்லை]

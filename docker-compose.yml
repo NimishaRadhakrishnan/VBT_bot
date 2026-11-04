@@ -1,0 +1,23 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment: {POSTGRES_USER: agri, POSTGRES_PASSWORD: agri, POSTGRES_DB: agri}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    ports: ["5432:5432"]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U agri"], interval: 5s, retries: 10}
+  api:
+    build: .
+    env_file: .env
+    environment: {DATABASE_URL: "postgresql://agri:agri@db:5432/agri"}
+    command: sh -c "python -m agri.cli init-db && uvicorn agri.api:app --host 0.0.0.0 --port 8000"
+    volumes: [./agri:/app/agri, ./media:/app/media, ./models:/app/models, ./data:/app/data, hfcache:/app/.cache/hf]
+    ports: ["8000:8000"]
+    depends_on: {db: {condition: service_healthy}}
+  bot:
+    build: .
+    env_file: .env
+    environment: {API_BASE_URL: "http://api:8000"}
+    command: python -m agri.telegram_bot
+    volumes: [./agri:/app/agri]
+    depends_on: [api]
+volumes: {pgdata: {}, hfcache: {}}

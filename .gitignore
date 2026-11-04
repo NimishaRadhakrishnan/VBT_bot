@@ -1,0 +1,11 @@
+.env
+media/
+models/heads/*/
+__pycache__/
+*.pyc
+.cache/
+.pytest_cache/
+.DS_Store
+.venv/
+venv/
+
